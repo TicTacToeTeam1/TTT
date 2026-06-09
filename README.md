@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## 📋 About
 Representation of the classic Tic Tac Toe using Java and printing through the terminal.
 

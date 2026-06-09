@@ -4,12 +4,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.femcoders-team1</groupId>
+  <groupId>com.team1</groupId>
   <artifactId>tictactoe-equipo1</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <name>tictactoe-equipo1</name>
-  <url>http://www.femcoders-team1.com</url>
+  <url>http://www.team1.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
