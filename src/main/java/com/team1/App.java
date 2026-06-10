@@ -29,11 +29,21 @@ public class App {
 
         // GAME
         boolean game = true;
+        player1.setTurn(true);
+        String field;
 
         do {
-            System.out.println("Turno de: " + player1.getName());
-            System.out.print("Selecciona una fila y columna: ");
-            String field = scanner.nextLine();
+            if(player1.getTurn()==true){
+                System.out.println("Turno de: " + player1.getName());
+                System.out.print("Selecciona una fila y columna: ");
+                field=scanner.nextLine();
+                player1.setTurn(false);
+            }else{
+                System.out.println("Turno de: " + player2.getName());
+                System.out.print("Selecciona una fila y columna: ");
+                field=scanner.nextLine();
+                player1.setTurn(true);
+            }
             board.printBoard();
             
         } while(game);
