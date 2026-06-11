@@ -23,7 +23,18 @@ public class Board {
         }
     }
     
-    public void setBoard(char x, char y, char player) {
-        this.board[x][y] = player;
+    public void setBoard(char x, char y, char token) {
+        if (this.board[x][y]=='_') {  
+            this.board[x][y] = token;
+        }
+
     }
+    public boolean isEmpty(int x, int y, char token) {
+        if (this.board[x][y]=='_') {  
+            this.board[x][y] = token;
+            return true;
+        } else {
+            return false;
+        }   
+    }  
 }
