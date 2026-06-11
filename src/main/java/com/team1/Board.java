@@ -22,16 +22,17 @@ public class Board {
             System.out.println("\n");
         }
     }
-    
-    public void setBoard(char x, char y, char token) {
-        if (this.board[x][y]=='_') {  
-            this.board[x][y] = token;
-        }
 
+    public char getBoard(int x, int y) {
+        return this.board[x][y];
     }
-    public boolean isEmpty(int x, int y, char token) {
+    
+    public void setBoard(int x, int y, char token) {
+        this.board[x][y] = token;
+    }
+
+    public boolean isEmpty(int x, int y) {
         if (this.board[x][y]=='_') {  
-            this.board[x][y] = token;
             return true;
         } else {
             return false;

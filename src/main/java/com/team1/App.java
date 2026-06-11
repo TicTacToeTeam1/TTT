@@ -61,7 +61,8 @@ public class App {
         field = scanner.nextLine();
         row = Character.getNumericValue(field.charAt(0));
         column = Character.getNumericValue(field.charAt(2));
-        if (board.isEmpty(row - 1, column - 1, player.getToken())) {
+        if (board.isEmpty(row - 1, column - 1)) {
+            board.setBoard(row - 1, column - 1, player.getToken());
             return true;
         } else {
             System.out.println("Este sitio está ocupado, intenta de nuevo: ");
