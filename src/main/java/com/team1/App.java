@@ -31,12 +31,16 @@ public class App {
         boolean game = true;
         player1.setTurn(true);
         String field;
+        int row;
+        int column;
 
         do {
             if(player1.getTurn()==true){
                 System.out.println("Turno de: " + player1.getName());
-                System.out.print("Selecciona una fila y columna: ");
+                System.out.print("Selecciona una fila y columna (1-3): ");
                 field=scanner.nextLine();
+                row = Character.getNumericValue(field.charAt(0));
+                column = Character.getNumericValue(field.charAt(2));
                 player1.setTurn(false);
             }else{
                 System.out.println("Turno de: " + player2.getName());
