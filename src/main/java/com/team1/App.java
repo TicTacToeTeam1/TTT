@@ -35,10 +35,15 @@ public class App {
 
         do {
             if (player1.getTurn() == true) {
-                playGame(player1, board, field, row, column, scanner);
-            } else {
-                playGame(player2, board, field, row, column, scanner);
-                player1.setTurn(true);
+                if (playGame(player1, board, field, row, column, scanner)){
+                    player2.setTurn(true);
+                    player1.setTurn(false);
+                }
+            } else if(player2.getTurn()==true){
+                if(playGame(player2, board, field, row, column, scanner)){
+                    player1.setTurn(true);
+                    player2.setTurn(false);
+                }
             }
             board.printBoard();
 
@@ -50,16 +55,17 @@ public class App {
 
     }
 
-    public static void playGame(Player player, Board board, String field, int row, int column, Scanner scanner) {
+    public static boolean playGame(Player player, Board board, String field, int row, int column, Scanner scanner) {
         System.out.println("Turno de: " + player.getName());
         System.out.print("Selecciona una fila y columna (1-3): ");
         field = scanner.nextLine();
         row = Character.getNumericValue(field.charAt(0));
         column = Character.getNumericValue(field.charAt(2));
         if (board.isEmpty(row - 1, column - 1, player.getToken())) {
-            player.setTurn(false);
+            return true;
         } else {
             System.out.println("Este sitio está ocupado, intenta de nuevo: ");
+            return false;
         }
     }
 }
