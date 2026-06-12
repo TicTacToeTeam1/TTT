@@ -57,31 +57,29 @@ java -cp out Main
 mvn test
 ```
 
-**With Gradle**
-
-```bash
-gradle test
-```
-
 ---
 
 ## 🌳 Project Tree
 
 ```
-TTT/
-├── src/
-│   ├── main/
-│   │   └── java/
-│   │       ├── Board.java        # Board logic
-│   │       ├── Game.java         # Game flow control
-│   │       ├── Player.java       # Player model
-│   │       ├── Display.java      # Terminal display
-│   │       └── Main.java         # Entry point
-│   └── test/
-│       └── java/
-│           ├── BoardTest.java
-│           └── GameTest.java
-└── README.md
+. ├─ README.md
+├─ pom.xml
+├─ .gitignore
+├─ target/
+└─ src/
+├─ main/
+│ └─ java/
+│ └─ com/
+│ └─ team1/
+│ ├─ App.java
+│ ├─ Board.java
+│ └─ Player.java
+└─ test/
+└─ java/
+└─ com/
+└─ team1/
+├─ BoardTest.java
+└─ PlayerTest.java
 ```
 
 ---
