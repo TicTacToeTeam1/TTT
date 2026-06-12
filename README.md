@@ -38,26 +38,17 @@ cd TTT
 **Compile**
 
 ```bash
-javac -d out src/main/java/*.java
+javac src/main/java/App.java
 ```
 
 **Run**
 
 ```bash
-java -cp out Main
+java src/main/java/App
 ```
 
 ---
 
-## 🧪 How to Run Tests
-
-**With Maven**
-
-```bash
-mvn test
-```
-
----
 
 ## 🌳 Project Tree
 
