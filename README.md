@@ -47,83 +47,53 @@ javac src/main/java/App.java
 java src/main/java/App
 ```
 
----
-
-
 ## 🌳 Project Tree
 
 ```
-. ├─ README.md
-├─ pom.xml
-├─ .gitignore
-├─ target/
-└─ src/
-├─ main/
-│ └─ java/
-│ └─ com/
-│ └─ team1/
-│ ├─ App.java
-│ ├─ Board.java
-│ └─ Player.java
-└─ test/
-└─ java/
-└─ com/
-└─ team1/
-├─ BoardTest.java
-└─ PlayerTest.java
+TTT/
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       ├── App.java        # Game flow control
+│   │       ├── Board.java         # Board logic
+│   │       ├── Player.java       # Player model
+│   └── test/
+│       └── java/
+│           ├── BoardTest.java
+│           └── PlayerTest.java
+└── README.md
 ```
 
----
-
-## ✅ Functional Requirements
-
-- **MUST** display an empty board at the start of the game.
-- **MUST** display the current board state after each move.
-- **MUST** allow players to take turns — X first, then O.
-- **MUST** accept moves by row and column number input.
-- **MUST** verify the selected cell is empty before placing a mark, and show an error if it is already taken.
-- **MUST** check for a winner after every move.
-- **MUST** check for a winner or a draw when the board is full.
-- **MUST** display a message announcing the winner or a draw.
-
----
-
-## ⚙️ Non-Functional Requirements
-
-- Terminal-only interface.
-- Minimum memory usage; clean code following Java conventions.
-- Clear naming for classes, attributes, and methods.
-- Unit tests with JUnit.
-- Single Responsibility Principle (S from SOLID).
-
----
 
 ## 🎯 Demo
 
 ```
- _ | _ | _
- _ | _ | _
- _ | _ | _
+Juguemos tic tac toe
+Objetivo: en un tablero de 3x3, debes completar con 3 símbolos (X o O) una fila, columna o diagonal para ganar el juego.
+Introduce un nombre para la primera jugadora: holi
+Introduce un nombre para la segunda jugadora: adios
+Jugadora holi eres X
+Jugadora adios eres O
+ _  _  _
+ _  _  _
+ _  _  _
 
-Player X's turn
-Enter row (0-2): 1
-Enter column (0-2): 1
+Turno de: holi
+Selecciona una fila y columna (1-3): 1 2
+ _  X  _
+ _  _  _
+ _  _  _
 
- _ | _ | _
- _ | X | _
- _ | _ | _
+Turno de: adios
+Selecciona una fila y columna (1-3): 2 2
 
-Player O's turn
-Enter row (0-2): 0
-Enter column (0-2): 0
-
- O | _ | _
- _ | X | _
- _ | _ | _
+ _  X  _
+ _  O  _
+ _  _  _
 
 ...
 
-🎉 Player X wins!
+¡holi ha ganado la partida!
 ```
 
 ---
